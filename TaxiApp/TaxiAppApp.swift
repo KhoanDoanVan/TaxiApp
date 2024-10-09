@@ -11,7 +11,10 @@ import SwiftUI
 struct TaxiAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ChangeLanguageView()
+            }
+            .navigationViewStyle(.stack)
         }
     }
 }

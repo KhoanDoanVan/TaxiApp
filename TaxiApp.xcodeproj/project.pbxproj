@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4698B6552CB690DC00014ADE /* TaxiAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B6542CB690DC00014ADE /* TaxiAppApp.swift */; };
-		4698B6572CB690DC00014ADE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B6562CB690DC00014ADE /* ContentView.swift */; };
 		4698B6592CB690DD00014ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4698B6582CB690DD00014ADE /* Assets.xcassets */; };
 		4698B65C2CB690DD00014ADE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4698B65B2CB690DD00014ADE /* Preview Assets.xcassets */; };
 		4698B66B2CB692AC00014ADE /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B66A2CB692AC00014ADE /* UIExtension.swift */; };
+		4698B6712CB6958F00014ADE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4698B6702CB6958F00014ADE /* Launch Screen.storyboard */; };
+		4698B6752CB69F5100014ADE /* ChangeLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B6742CB69F5100014ADE /* ChangeLanguageView.swift */; };
+		4698B6772CB6A2E400014ADE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B6762CB6A2E400014ADE /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4698B6512CB690DC00014ADE /* TaxiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4698B6542CB690DC00014ADE /* TaxiAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiAppApp.swift; sourceTree = "<group>"; };
-		4698B6562CB690DC00014ADE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4698B6582CB690DD00014ADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4698B65B2CB690DD00014ADE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4698B6632CB6917500014ADE /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Bold.ttf"; path = "../../../../../../Downloads/NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -27,6 +28,9 @@
 		4698B6672CB691B800014ADE /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-SemiBold.ttf"; path = "../../../../../../Downloads/NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		4698B66A2CB692AC00014ADE /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		4698B66C2CB6937000014ADE /* taxi-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "taxi-app-Info.plist"; sourceTree = "<group>"; };
+		4698B6702CB6958F00014ADE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4698B6742CB69F5100014ADE /* ChangeLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageView.swift; sourceTree = "<group>"; };
+		4698B6762CB6A2E400014ADE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +71,9 @@
 				4698B6682CB6927900014ADE /* UICommon */,
 				4698B6622CB6916100014ADE /* Fonts */,
 				4698B6542CB690DC00014ADE /* TaxiAppApp.swift */,
-				4698B6562CB690DC00014ADE /* ContentView.swift */,
 				4698B6582CB690DD00014ADE /* Assets.xcassets */,
 				4698B65A2CB690DD00014ADE /* Preview Content */,
+				4698B6702CB6958F00014ADE /* Launch Screen.storyboard */,
 			);
 			path = TaxiApp;
 			sourceTree = "<group>";
@@ -112,6 +116,8 @@
 		4698B66D2CB694E800014ADE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4698B6782CB6A6E200014ADE /* Home */,
+				4698B6722CB69EEE00014ADE /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +134,22 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4698B6722CB69EEE00014ADE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4698B6742CB69F5100014ADE /* ChangeLanguageView.swift */,
+				4698B6762CB6A2E400014ADE /* WelcomeView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4698B6782CB6A6E200014ADE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4698B6712CB6958F00014ADE /* Launch Screen.storyboard in Resources */,
 				4698B65C2CB690DD00014ADE /* Preview Assets.xcassets in Resources */,
 				4698B6592CB690DD00014ADE /* Assets.xcassets in Resources */,
 			);
@@ -200,9 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4698B6572CB690DC00014ADE /* ContentView.swift in Sources */,
+				4698B6752CB69F5100014ADE /* ChangeLanguageView.swift in Sources */,
 				4698B66B2CB692AC00014ADE /* UIExtension.swift in Sources */,
 				4698B6552CB690DC00014ADE /* TaxiAppApp.swift in Sources */,
+				4698B6772CB6A2E400014ADE /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +367,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -374,6 +399,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

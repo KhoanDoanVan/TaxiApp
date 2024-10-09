@@ -11,6 +11,7 @@
 		4698B6572CB690DC00014ADE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B6562CB690DC00014ADE /* ContentView.swift */; };
 		4698B6592CB690DD00014ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4698B6582CB690DD00014ADE /* Assets.xcassets */; };
 		4698B65C2CB690DD00014ADE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4698B65B2CB690DD00014ADE /* Preview Assets.xcassets */; };
+		4698B66B2CB692AC00014ADE /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B66A2CB692AC00014ADE /* UIExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,13 @@
 		4698B6562CB690DC00014ADE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4698B6582CB690DD00014ADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4698B65B2CB690DD00014ADE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4698B6632CB6917500014ADE /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Bold.ttf"; path = "../../../../../../Downloads/NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		4698B6642CB6918500014ADE /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-ExtraBold.ttf"; path = "../../../../../../Downloads/NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4698B6652CB6919700014ADE /* NunitoSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Medium.ttf"; path = "../../../../../../Downloads/NunitoSans-Medium.ttf"; sourceTree = "<group>"; };
+		4698B6662CB691A500014ADE /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Regular.ttf"; path = "../../../../../../Downloads/NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		4698B6672CB691B800014ADE /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-SemiBold.ttf"; path = "../../../../../../Downloads/NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		4698B66A2CB692AC00014ADE /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		4698B66C2CB6937000014ADE /* taxi-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "taxi-app-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,13 @@
 		4698B6532CB690DC00014ADE /* TaxiApp */ = {
 			isa = PBXGroup;
 			children = (
+				4698B66C2CB6937000014ADE /* taxi-app-Info.plist */,
+				4698B66F2CB694F200014ADE /* Model */,
+				4698B66E2CB694EC00014ADE /* ViewModel */,
+				4698B66D2CB694E800014ADE /* View */,
+				4698B6692CB6929700014ADE /* Common */,
+				4698B6682CB6927900014ADE /* UICommon */,
+				4698B6622CB6916100014ADE /* Fonts */,
 				4698B6542CB690DC00014ADE /* TaxiAppApp.swift */,
 				4698B6562CB690DC00014ADE /* ContentView.swift */,
 				4698B6582CB690DD00014ADE /* Assets.xcassets */,
@@ -65,6 +80,54 @@
 				4698B65B2CB690DD00014ADE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4698B6622CB6916100014ADE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4698B6632CB6917500014ADE /* NunitoSans-Bold.ttf */,
+				4698B6642CB6918500014ADE /* NunitoSans-ExtraBold.ttf */,
+				4698B6652CB6919700014ADE /* NunitoSans-Medium.ttf */,
+				4698B6662CB691A500014ADE /* NunitoSans-Regular.ttf */,
+				4698B6672CB691B800014ADE /* NunitoSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4698B6682CB6927900014ADE /* UICommon */ = {
+			isa = PBXGroup;
+			children = (
+				4698B66A2CB692AC00014ADE /* UIExtension.swift */,
+			);
+			path = UICommon;
+			sourceTree = "<group>";
+		};
+		4698B6692CB6929700014ADE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4698B66D2CB694E800014ADE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4698B66E2CB694EC00014ADE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4698B66F2CB694F200014ADE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4698B6572CB690DC00014ADE /* ContentView.swift in Sources */,
+				4698B66B2CB692AC00014ADE /* UIExtension.swift in Sources */,
 				4698B6552CB690DC00014ADE /* TaxiAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +339,13 @@
 				DEVELOPMENT_TEAM = 8SBSSA37JJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaxiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +370,13 @@
 				DEVELOPMENT_TEAM = 8SBSSA37JJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaxiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

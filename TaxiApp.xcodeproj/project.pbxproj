@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4674F7762CB7BBC70003E695 /* MobileNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674F7752CB7BBC70003E695 /* MobileNumberView.swift */; };
+		4674F7782CB7D16D0003E695 /* CountryPickerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674F7772CB7D16D0003E695 /* CountryPickerUI.swift */; };
+		4674F77B2CB7D19B0003E695 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4674F77A2CB7D19B0003E695 /* CountryPicker */; };
 		4698B6552CB690DC00014ADE /* TaxiAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698B6542CB690DC00014ADE /* TaxiAppApp.swift */; };
 		4698B6592CB690DD00014ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4698B6582CB690DD00014ADE /* Assets.xcassets */; };
 		4698B65C2CB690DD00014ADE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4698B65B2CB690DD00014ADE /* Preview Assets.xcassets */; };
@@ -17,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4674F7752CB7BBC70003E695 /* MobileNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberView.swift; sourceTree = "<group>"; };
+		4674F7772CB7D16D0003E695 /* CountryPickerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerUI.swift; sourceTree = "<group>"; };
 		4698B6512CB690DC00014ADE /* TaxiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4698B6542CB690DC00014ADE /* TaxiAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiAppApp.swift; sourceTree = "<group>"; };
 		4698B6582CB690DD00014ADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4674F77B2CB7D19B0003E695 /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4698B66A2CB692AC00014ADE /* UIExtension.swift */,
+				4674F7772CB7D16D0003E695 /* CountryPickerUI.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 			children = (
 				4698B6742CB69F5100014ADE /* ChangeLanguageView.swift */,
 				4698B6762CB6A2E400014ADE /* WelcomeView.swift */,
+				4674F7752CB7BBC70003E695 /* MobileNumberView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -168,6 +176,9 @@
 			dependencies = (
 			);
 			name = TaxiApp;
+			packageProductDependencies = (
+				4674F77A2CB7D19B0003E695 /* CountryPicker */,
+			);
 			productName = TaxiApp;
 			productReference = 4698B6512CB690DC00014ADE /* TaxiApp.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +207,9 @@
 				Base,
 			);
 			mainGroup = 4698B6482CB690DC00014ADE;
+			packageReferences = (
+				4674F7792CB7D19B0003E695 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+			);
 			productRefGroup = 4698B6522CB690DC00014ADE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4674F7782CB7D16D0003E695 /* CountryPickerUI.swift in Sources */,
+				4674F7762CB7BBC70003E695 /* MobileNumberView.swift in Sources */,
 				4698B6752CB69F5100014ADE /* ChangeLanguageView.swift in Sources */,
 				4698B66B2CB692AC00014ADE /* UIExtension.swift in Sources */,
 				4698B6552CB690DC00014ADE /* TaxiAppApp.swift in Sources */,
@@ -438,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4674F7792CB7D19B0003E695 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4674F77A2CB7D19B0003E695 /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4674F7792CB7D19B0003E695 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4698B6492CB690DC00014ADE /* Project object */;
 }

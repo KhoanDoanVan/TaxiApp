@@ -27,7 +27,7 @@ struct WelcomeView: View {
                 Spacer()
                 
                 NavigationLink {
-                    
+                    MobileNumberView()
                 } label: {
                     Text("SIGN IN")
                         .font(.customfont(.regular, fontSize: 16))

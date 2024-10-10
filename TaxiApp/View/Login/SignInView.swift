@@ -1,5 +1,5 @@
 //
-//  MobileNumberView.swift
+//  SignInView.swift
 //  TaxiApp
 //
 //  Created by Đoàn Văn Khoan on 10/10/24.
@@ -8,18 +8,18 @@
 import SwiftUI
 import CountryPicker
 
-struct MobileNumberView: View {
+struct SignInView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    
     @State private var countryObj: Country?
     @State private var showCountryPicker: Bool = false
     @State private var txtMobile = ""
+    @State private var showPassword = false
+    @State private var txtPassword = ""
     
     var body: some View {
         ZStack {
             ScrollView {
-                
                 HStack {
                     Button {
                         mode.wrappedValue.dismiss()
@@ -35,10 +35,8 @@ struct MobileNumberView: View {
                 .padding(.top, .topInsets + 8)
                 .padding(.horizontal, 20)
                 
-                
                 VStack(alignment: .leading, spacing: 0) {
-                    
-                    Text("Enter mobile number")
+                    Text("Sign In")
                         .font(.customfont(.bold, fontSize: 24))
                         .padding(.bottom, 30)
                     
@@ -68,31 +66,12 @@ struct MobileNumberView: View {
                     Divider()
                         .padding(.bottom, 15)
                     
-                    Text("BY continuing, I confirm that i have read and agree to the")
-                        .font(.customfont(.regular, fontSize: 11))
-                        .foregroundColor(Color.secondaryText)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                    
-                    HStack {
-                        Text("Terms & conditions")
-                            .font(.customfont(.regular, fontSize: 11))
-                            .foregroundColor(Color.secondaryText)
-                        
-                        Text("and")
-                            .font(.customfont(.regular, fontSize: 11))
-                            .foregroundColor(Color.secondaryText)
-                        
-                        Text("Privacy policy")
-                            .font(.customfont(.regular, fontSize: 11))
-                            .foregroundColor(Color.secondaryText)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(.bottom, 15)
-
+                    LineSecureField(title: "Password", placeholder: "*******",txt: $txtPassword, isShowPassword: $showPassword)
+                        .padding(.bottom, 15)
                     
                     
                     NavigationLink {
-                        OTPView()
+                        
                     } label: {
                         Text("CONTINUE")
                             .font(.customfont(.regular, fontSize: 16))
@@ -101,9 +80,18 @@ struct MobileNumberView: View {
                     .frame(maxWidth: .infinity, minHeight: 45, alignment: .center)
                     .background(Color.primaryApp)
                     .cornerRadius(25)
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("FORGOT PASSWORD")
+                            .font(.customfont(.bold, fontSize: 16))
+                            .foregroundColor(Color.primaryApp)
+                    }
+                    .frame(maxWidth: .infinity, minHeight: 45, alignment: .center)
                 }
                 .foregroundColor(Color.primaryText)
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 15)
             }
         }
         .onAppear {
@@ -120,5 +108,5 @@ struct MobileNumberView: View {
 }
 
 #Preview {
-    MobileNumberView()
+    SignInView()
 }

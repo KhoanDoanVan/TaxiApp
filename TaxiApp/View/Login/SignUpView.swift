@@ -1,5 +1,5 @@
 //
-//  MobileNumberView.swift
+//  SignUpView.swift
 //  TaxiApp
 //
 //  Created by Đoàn Văn Khoan on 10/10/24.
@@ -8,18 +8,22 @@
 import SwiftUI
 import CountryPicker
 
-struct MobileNumberView: View {
+struct SignUpView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    
     @State private var countryObj: Country?
     @State private var showCountryPicker: Bool = false
+    @State private var txtAddress = ""
+    @State private var txtFirst = ""
+    @State private var txtLast = ""
     @State private var txtMobile = ""
+    
+    @State private var showPassword = false
+    @State private var txtPassword = ""
     
     var body: some View {
         ZStack {
             ScrollView {
-                
                 HStack {
                     Button {
                         mode.wrappedValue.dismiss()
@@ -35,12 +39,16 @@ struct MobileNumberView: View {
                 .padding(.top, .topInsets + 8)
                 .padding(.horizontal, 20)
                 
-                
                 VStack(alignment: .leading, spacing: 0) {
-                    
-                    Text("Enter mobile number")
+                    Text("Create profile")
                         .font(.customfont(.bold, fontSize: 24))
                         .padding(.bottom, 30)
+                    
+                    LineTextField( title: "First name", placeholder: "Ex: Simon" ,txt: $txtFirst)
+                        .padding(.bottom, 8)
+                    
+                    LineTextField( title: "Last name", placeholder: "Ex: IsDev" ,txt: $txtLast)
+                        .padding(.bottom, 8)
                     
                     Text("Mobile")
                         .font(.customfont(.regular, fontSize: 14))
@@ -68,6 +76,12 @@ struct MobileNumberView: View {
                     Divider()
                         .padding(.bottom, 15)
                     
+                    LineTextField( title: "Home Address", placeholder: "Ex: Home No, City, State, ZipCode" ,txt: $txtAddress)
+                        .padding(.bottom, 8)
+                    
+                    LineSecureField(title: "Password", placeholder: "*******",txt: $txtPassword, isShowPassword: $showPassword)
+                        .padding(.bottom, 8)
+                    
                     Text("BY continuing, I confirm that i have read and agree to the")
                         .font(.customfont(.regular, fontSize: 11))
                         .foregroundColor(Color.secondaryText)
@@ -88,22 +102,21 @@ struct MobileNumberView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.bottom, 15)
-
-                    
                     
                     NavigationLink {
-                        OTPView()
+                        
                     } label: {
-                        Text("CONTINUE")
+                        Text("REGISTER")
                             .font(.customfont(.regular, fontSize: 16))
                             .foregroundColor(Color.white)
                     }
                     .frame(maxWidth: .infinity, minHeight: 45, alignment: .center)
                     .background(Color.primaryApp)
                     .cornerRadius(25)
+                    .padding(.bottom, 30)
                 }
                 .foregroundColor(Color.primaryText)
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 15)
             }
         }
         .onAppear {
@@ -116,9 +129,10 @@ struct MobileNumberView: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden()
         .ignoresSafeArea()
+
     }
 }
 
 #Preview {
-    MobileNumberView()
+    SignUpView()
 }

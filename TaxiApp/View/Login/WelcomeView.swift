@@ -27,7 +27,8 @@ struct WelcomeView: View {
                 Spacer()
                 
                 NavigationLink {
-                    MobileNumberView()
+//                    MobileNumberView()
+                    SignInView()
                 } label: {
                     Text("SIGN IN")
                         .font(.customfont(.regular, fontSize: 16))
@@ -37,8 +38,8 @@ struct WelcomeView: View {
                 .background(Color.primaryApp)
                 .cornerRadius(25)
                 
-                Button {
-                    
+                NavigationLink {
+                    SignUpView()
                 } label: {
                     Text("SIGN UP")
                         .font(.customfont(.regular, fontSize: 16))
@@ -58,5 +59,7 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView()
+    NavigationView {
+        WelcomeView()
+    }
 }

@@ -1,30 +1,25 @@
 //
-//  SignUpView.swift
+//  BankDetailsView.swift
 //  TaxiApp
 //
-//  Created by Đoàn Văn Khoan on 10/10/24.
+//  Created by Đoàn Văn Khoan on 11/10/24.
 //
 
 import SwiftUI
-import CountryPicker
 
-struct SignUpView: View {
-    
+struct BankDetailsView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @State private var countryObj: Country?
-    @State private var showCountryPicker: Bool = false
-    @State private var txtAddress = ""
-    @State private var txtFirst = ""
-    @State private var txtLast = ""
-    @State private var txtMobile = ""
-    
-    @State private var showPassword = false
-    @State private var txtPassword = ""
+
+    @State private var txtBankName = ""
+    @State private var txtAccountHolderName = ""
+    @State private var txtAccountNumber = ""
+    @State private var txtSwiftCode = ""
+
     
     var body: some View {
         ZStack {
             ScrollView {
-                HStack {
+                HStack(alignment: .center) {
                     Button {
                         mode.wrappedValue.dismiss()
                     } label: {
@@ -34,53 +29,27 @@ struct SignUpView: View {
                             .frame(width: 30, height: 30)
                     }
                     
+                    Text("Bank Details")
+                        .font(.customfont(.bold, fontSize: 24))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    
                     Spacer()
                 }
                 .padding(.top, .topInsets + 8)
                 .padding(.horizontal, 20)
                 
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Create profile")
-                        .font(.customfont(.bold, fontSize: 24))
-                        .padding(.bottom, 30)
                     
-                    LineTextField( title: "First name", placeholder: "Ex: Simon" ,txt: $txtFirst)
+                    LineTextField( title: "Bank Name", placeholder: "Ex: SBI" ,txt: $txtBankName)
                         .padding(.bottom, 8)
                     
-                    LineTextField( title: "Last name", placeholder: "Ex: IsDev" ,txt: $txtLast)
+                    LineTextField( title: "Account Holder", placeholder: "Ex: Simonisdev" ,txt: $txtAccountHolderName)
                         .padding(.bottom, 8)
                     
-                    Text("Mobile")
-                        .font(.customfont(.regular, fontSize: 14))
-                        .foregroundColor(.placeholder)
-                        .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    HStack {
-                        Button {
-                            showCountryPicker = true
-                        } label: {
-                            if let countryObj = countryObj {
-                                Text("\(countryObj.isoCode.getFlag())")
-                                    .font(.customfont(.medium, fontSize: 35))
-                                
-                                Text("+\(countryObj.phoneCode)")
-                                    .font(.customfont(.medium, fontSize: 16))
-                            }
-                        }
-                        
-                        TextField("Enter Mobile", text: $txtMobile)
-                            .font(.customfont(.medium, fontSize: 16))
-                            .frame(maxWidth: .infinity)
-                    }
-                    
-                    Divider()
-                        .padding(.bottom, 15)
-                    
-                    LineTextField( title: "Home Address", placeholder: "Ex: Home No, City, State, ZipCode" ,txt: $txtAddress)
+                    LineTextField( title: "Swift/IFSC Code", placeholder: "Ex: 00000000" ,txt: $txtSwiftCode)
                         .padding(.bottom, 8)
-                    
-                    LineSecureField(title: "Password", placeholder: "*******",txt: $txtPassword, isShowPassword: $showPassword)
-                        .padding(.bottom, 8)
+                
                     
                     Text("BY continuing, I confirm that i have read and agree to the")
                         .font(.customfont(.regular, fontSize: 11))
@@ -104,9 +73,9 @@ struct SignUpView: View {
                     .padding(.bottom, 15)
                     
                     NavigationLink {
-                        BankDetailsView()
+                        DocumentUploadView()
                     } label: {
-                        Text("REGISTER")
+                        Text("NEXT")
                             .font(.customfont(.regular, fontSize: 16))
                             .foregroundColor(Color.white)
                     }
@@ -119,12 +88,6 @@ struct SignUpView: View {
                 .padding(.horizontal, 15)
             }
         }
-        .onAppear {
-            self.countryObj = Country(phoneCode: "84", isoCode: "VN")
-        }
-        .sheet(isPresented: $showCountryPicker){
-            CountryPickerUI(country: $countryObj)
-        }
         .navigationTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden()
@@ -134,5 +97,5 @@ struct SignUpView: View {
 }
 
 #Preview {
-    SignUpView()
+    BankDetailsView()
 }

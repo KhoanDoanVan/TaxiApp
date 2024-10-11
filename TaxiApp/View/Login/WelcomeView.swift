@@ -27,7 +27,6 @@ struct WelcomeView: View {
                 Spacer()
                 
                 NavigationLink {
-//                    MobileNumberView()
                     SignInView()
                 } label: {
                     Text("SIGN IN")

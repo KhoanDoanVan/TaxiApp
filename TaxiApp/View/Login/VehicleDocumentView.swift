@@ -1,35 +1,35 @@
 //
-//  DocumentUploadView.swift
+//  VehicleDocumentView.swift
 //  TaxiApp
 //
-//  Created by Đoàn Văn Khoan on 11/10/24.
+//  Created by Đoàn Văn Khoan on 13/10/24.
 //
 
 import SwiftUI
 
-struct DocumentUploadView: View {
+struct VehicleDocumentView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var listArr = [
         [
-            "name": "Birth Certificate",
+            "name": "RC Book",
             "detail": "Vehicle Registration",
             "info": "",
             "status": DocumentStatus.uploaded
         ],
         [
-            "name": "Driving License",
+            "name": "Insurance policy",
             "detail": "A driving license is an official do ...",
             "info": "",
             "status": DocumentStatus.uploading
         ],
         [
-            "name": "Passport",
+            "name": "Owner certificate",
             "detail": "A passport is a travel document ...",
             "info": "",
             "status": DocumentStatus.upload
         ],
         [
-            "name": "Election Card",
+            "name": "PUC",
             "detail": "Incorrect document type",
             "info": "",
             "status": DocumentStatus.upload
@@ -50,7 +50,7 @@ struct DocumentUploadView: View {
                             .frame(width: 30, height: 30)
                     }
                     
-                    Text("Personal Document")
+                    Text("Vehicle Document")
                         .font(.customfont(.bold, fontSize: 24))
                         .frame(maxWidth: .infinity, alignment: .center)
                     
@@ -91,7 +91,7 @@ struct DocumentUploadView: View {
                     .padding(.bottom, 15)
                     
                     NavigationLink {
-                        AddVehicleView()
+                        SubscriptionPlanView()
                     } label: {
                         Text("NEXT")
                             .font(.customfont(.regular, fontSize: 16))
@@ -115,5 +115,5 @@ struct DocumentUploadView: View {
 }
 
 #Preview {
-    DocumentUploadView()
+    VehicleDocumentView()
 }

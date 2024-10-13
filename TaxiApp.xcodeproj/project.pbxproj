@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		463094F42CBBE12C00D9C9CC /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463094F32CBBE12C00D9C9CC /* AddVehicleView.swift */; };
+		463094F62CBBE34700D9C9CC /* VehicleDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463094F52CBBE34700D9C9CC /* VehicleDocumentView.swift */; };
+		463094F82CBBE3C900D9C9CC /* SubscriptionPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463094F72CBBE3C900D9C9CC /* SubscriptionPlanView.swift */; };
 		4674F7762CB7BBC70003E695 /* MobileNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674F7752CB7BBC70003E695 /* MobileNumberView.swift */; };
 		4674F7782CB7D16D0003E695 /* CountryPickerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674F7772CB7D16D0003E695 /* CountryPickerUI.swift */; };
 		4674F77B2CB7D19B0003E695 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4674F77A2CB7D19B0003E695 /* CountryPicker */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		463094F32CBBE12C00D9C9CC /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
+		463094F52CBBE34700D9C9CC /* VehicleDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDocumentView.swift; sourceTree = "<group>"; };
+		463094F72CBBE3C900D9C9CC /* SubscriptionPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPlanView.swift; sourceTree = "<group>"; };
 		4674F7752CB7BBC70003E695 /* MobileNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberView.swift; sourceTree = "<group>"; };
 		4674F7772CB7D16D0003E695 /* CountryPickerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerUI.swift; sourceTree = "<group>"; };
 		4674F77C2CB7D7D90003E695 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
@@ -173,6 +179,9 @@
 				4674F7842CB7E5EB0003E695 /* SignUpView.swift */,
 				4674F7862CB92E070003E695 /* BankDetailsView.swift */,
 				4674F7882CB9300E0003E695 /* DocumentUploadView.swift */,
+				463094F32CBBE12C00D9C9CC /* AddVehicleView.swift */,
+				463094F52CBBE34700D9C9CC /* VehicleDocumentView.swift */,
+				463094F72CBBE3C900D9C9CC /* SubscriptionPlanView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -262,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4674F7812CB7DEBC0003E695 /* SignInView.swift in Sources */,
+				463094F82CBBE3C900D9C9CC /* SubscriptionPlanView.swift in Sources */,
 				4674F7872CB92E070003E695 /* BankDetailsView.swift in Sources */,
+				463094F42CBBE12C00D9C9CC /* AddVehicleView.swift in Sources */,
 				4674F77D2CB7D7D90003E695 /* OTPView.swift in Sources */,
 				4674F77F2CB7D7E40003E695 /* OTPTextField.swift in Sources */,
 				4674F7782CB7D16D0003E695 /* CountryPickerUI.swift in Sources */,
@@ -274,6 +285,7 @@
 				4698B66B2CB692AC00014ADE /* UIExtension.swift in Sources */,
 				4698B6552CB690DC00014ADE /* TaxiAppApp.swift in Sources */,
 				4698B6772CB6A2E400014ADE /* WelcomeView.swift in Sources */,
+				463094F62CBBE34700D9C9CC /* VehicleDocumentView.swift in Sources */,
 				4674F7832CB7E0260003E695 /* LineTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

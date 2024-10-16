@@ -20,6 +20,53 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
+                
+                HStack(spacing: 0) {
+                    
+                    Spacer()
+                        .frame(width: 60, alignment: .center)
+                    
+                    Spacer()
+                    
+                    HStack {
+                        Text("$")
+                            .font(.customfont(.semiBold, fontSize: 14))
+                            .foregroundColor(Color.secondaryApp)
+                        
+                        Text("157.57")
+                            .font(.customfont(.extraBold, fontSize: 25))
+                            .foregroundColor(Color.primaryText)
+                    }
+                    .frame(width: 140, alignment: .center)
+                    .padding(8)
+                    .background(Color.white)
+                    .cornerRadius(40)
+                    .shadow(radius: 3, x: 0, y: -1)
+                    
+                    Spacer()
+                    
+                    ZStack(alignment: .bottomLeading) {
+                        Image("u1")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .overlay( RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 1.5))
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Text("3")
+                            .font(.customfont(.regular, fontSize: 10))
+                            .foregroundColor(Color.white)
+                            .padding(.horizontal, 5)
+                            .background(Color.red)
+                            .cornerRadius(20)
+                            .overlay( RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 1.5))
+                    }
+                    .frame(width: 60)
+                }
+                .padding(.horizontal, 25)
+                .padding(.top, .topInsets)
+                
                 Spacer()
                 
                 HStack {
@@ -56,31 +103,60 @@ struct HomeView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 10)
                 
-                VStack {
-                    ZStack {
-                        HStack {
-                            Button {
-                                
-                            } label: {
-                                Image(isOpen
-                                      ? "open_btn" : "close_btn")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:15)
+                VStack() {
+                    HStack {
+                        Button {
+                            withAnimation {
+                                isOpen.toggle()
                             }
-                            Spacer()
+                        } label: {
+                            Image(!isOpen
+                                  ? "open_btn" : "close_btn")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width:15)
                         }
-                        .padding(.horizontal, 25)
-                        
+                        Spacer()
                         Text("You're offline")
                             .font(.customfont(.extraBold, fontSize: 22))
                             .foregroundColor(Color.primaryText)
+                        Spacer()
+                        Spacer()
+                            .frame(width: 15)
                     }
+                    .padding(.horizontal, 25)
                     .frame(height: 50)
-                    .background(Color.white)
-                    .cornerRadius(20, corner: [.topLeft, .topRight])
-                    .shadow(radius: 3, x: 0, y: -3)
+                    .padding(.bottom, isOpen ? 0 : .bottomInsets)
+                    
+                    if (isOpen) {
+                        VStack(spacing: 0) {
+                            Divider()
+                            
+                            HStack {
+                                
+                                IconTitleSubtitleButton(icon: "acceptance", title: "Accetance", subtitle: "95.0%")
+                                
+                                Divider()
+                                    .frame(height: 100)
+                                
+                                IconTitleSubtitleButton(icon: "acceptance", title: "Accetance", subtitle: "95.0%")
+                                
+                                Divider()
+                                    .frame(height: 100)
+                                
+                                Group {
+                                    IconTitleSubtitleButton(icon: "acceptance", title: "Accetance", subtitle: "95.0%")
+                                }
+                            }
+                            
+                            Divider()
+                                .padding(.bottom, !isOpen ? 0 : .bottomInsets)
+                        }
+                    }
                 }
+                .background(Color.white)
+                .cornerRadius(20, corner: [.topLeft, .topRight])
+                .shadow(radius: 3, x: 0, y: -3)
             }
         }
         .navigationTitle("")
